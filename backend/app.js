@@ -2,6 +2,9 @@
 const express = require('express');
 const path = require('path');
 
+// link to routes files
+const users = require('./routes/users');
+
 // set port number
 const port = process.env.PORT || 8080;
 
@@ -12,6 +15,7 @@ const app = express();
 app.use(express.static(path.join(__dirname, 'public')));
 
 // MAIN ROUTES
+app.use('/users', users);
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/index.html'));
 });
