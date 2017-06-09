@@ -29,19 +29,19 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/index.html'));
 });
 
-// CONNECT TO DB
+// CONNECT TO DB, IF SUCCESSFUL START SERVER
 mongoose.connect(dbconfig.database);
 
 mongoose.connection.on('connected', () => {
   console.log('Connected to database ' + dbconfig.database);
+  // CONNECTED, START SERVER
+  app.listen(port, () => {
+    console.log('Server started on port ' + port);
+  });
 });
 
 mongoose.connection.on('error', (err) => {
   // CONNECTION FAILED, LOG ERROR TO CONSOLE
+  console.log('Server not started.');
   console.log('Database error: ' + err);
-});
-
-// START SERVER
-app.listen(port, () => {
-  console.log('Server started on port ' + port);
 });
