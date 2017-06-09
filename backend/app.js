@@ -1,7 +1,12 @@
 // load modules and libraries
 const express = require('express');
 const path = require('path');
+const bodyParser = require('body-parser');
+const cors = require('cors');
+const mongoose = require('mongoose');
 
+// link to database config file
+const dbconfig = require('./config/database');
 // link to routes files
 const users = require('./routes/users');
 
@@ -11,6 +16,10 @@ const port = process.env.PORT || 8080;
 // create express app
 const app = express();
 
+// activate various middleware
+app.use(cors());  // allows cross origin access
+app.use(bodyParser.json()); // parses form data to req.body
+
 // set root web folder to "/public"
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -18,6 +27,18 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/users', users);
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/index.html'));
+});
+
+// CONNECT TO DB
+mongoose.connect(dbconfig.database);
+
+mongoose.connection.on('connected', () => {
+  console.log('Connected to database ' + dbconfig.database);
+});
+
+mongoose.connection.on('error', (err) => {
+  // CONNECTION FAILED, LOG ERROR TO CONSOLE
+  console.log('Database error: ' + err);
 });
 
 // START SERVER
