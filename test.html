@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Hire A Sound Guy!</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+				<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+				<!-- Latest compiled and minified CSS -->
+				<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+				<!-- Optional theme -->
+				<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+				<!-- Latest compiled and minified JavaScript -->
+				<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+		<script src="jquery.star-rating-svg.js"></script>
+		<link rel="stylesheet" type="text/css" href="star-rating-svg.css">
+		<style>
+			body {
+			    background-color: #fafaf6;
+			    padding-top: 50px;
+			}
+
+			select {
+        /*for firefox*/
+        -moz-appearance: none;
+        /*for chrome*/
+        -webkit-appearance:none;
+      }
+
+			/*for IE10*/
+			select::-ms-expand {
+			    display: none;
+			}
+
+			.btn-custom {
+				background-image: linear-gradient(to bottom,#00abf0 0,#008ac1 100%);
+			}
+
+			.loadmore {
+				text-align: center;
+			}
+
+			.resultstitle h1 {
+				text-align: center;
+				font-size: 1.3em;
+			}
+
+			.results {
+				min-width: 300px;
+				margin-left: auto;
+				margin-right: auto;
+				width: 85vw;
+				padding-top: 1vh;
+				padding-bottom: 2vh;
+			}
+
+			.listing {
+				display: flex;
+				background-color: #e6e5e1;
+				min-width: 0px;
+				min-height: 100px;
+    		margin-top: 1vh;
+				font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+				font-weight: bold;
+			}
+
+			.listing:hover {
+				background-color: #dcdbd8;
+				cursor: pointer;
+			}
+
+			.profilepic {
+			}
+
+			.avatar {
+				max-width: 200px;
+				max-height: 200px;
+				min-width: 100px;
+				min-height: 100px;
+				height: 25vh;
+				width: 25vh;
+			}
+
+			.listinginfo {
+				flex: 1;
+				margin-top: auto;
+				margin-bottom: auto;
+				margin-left: 2vw;
+			}
+
+			.listinglocation {
+
+				color: #a99967;
+			}
+
+			.listingexperience {
+				color: #666666;
+				font-weight: 300;
+			}
+
+			.listingrating {
+				display: flex;
+				color: #b5afa3;
+				font-weight: 100;
+				font-style: italic;
+				font-size: 0.9em
+			}
+
+			.listingratingstars {
+				padding-right: 2vw;
+				margin-left: -4px;
+			}
+
+			.listingratingreviews {
+				margin-left: 0.2vw;
+			}
+			
+			.listingname {
+				color: #00abf0;
+			}
+
+			@media (max-device-width: 768px) {
+				.container {
+					padding-right: 30px;
+				}
+
+				.avatar {
+					height: 15vh;
+					width: 15vh;
+				}
+			}
+
+			@media (max-device-width: 380px) {
+
+			}
+
+		</style>
+	</head>
+	<body>
+    <nav class="navbar navbar-light navbar-fixed-top" style="background-color: #00abf0;">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar" style="background-color: #000000;"></span>
+            <span class="icon-bar" style="background-color: #000000;"></span>
+            <span class="icon-bar" style="background-color: #000000;"></span>
+         </button>
+          <a class="navbar-brand" href="MAIN SCREEN/index.html">HIRE A SOUND GUY . COM</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Profile</a></li>
+            <li><a href="#about">Sign Up</a></li>
+            <li><a href="#about">Sign In</a></li>
+            <li><a href="#contact">Sign Out</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+		<div class="container">
+			<div class="resultstitle">
+				<h1>Sound guys near Shoreline, WA</h1>
+			</div>
+			<div class="results">
+				<div class="listing">
+					<span class="profilepic">
+						<img src="noprofilepic.jpg" class="avatar">
+					</span>
+					<span class="listinginfo">
+						<div class="listinglocation">Shoreline, WA</div>
+						<div class="listingexperience">0 Years Experience</div>
+						<div class="listingrating">
+							<span class="listingratingstars"><div class="my-rating1"></div></span>
+							<span class="listingratingreviews">10 reviews</span>
+						</div>
+						<div class="listingname">Dude McGee</div>
+					</span>
+				</div>
+				<div class="listing">
+					<span class="profilepic">
+						<img src="me.jpg" class="avatar">
+					</span>
+					<span class="listinginfo">
+						<div class="listinglocation">Shoreline, WA</div>
+						<div class="listingexperience">10 Years Experience</div>
+						<div class="listingrating">
+							<!-- <span class="listingratingstars"></span>   -->
+							<span class="listingratingreviews">no reviews</span>
+						</div>
+						<div class="listingname">Eric Eschelbach</div>
+					</span>
+				</div>
+				<div class="listing">
+					<span class="profilepic">
+						<img src="bs.jpg" class="avatar">
+					</span>
+					<span class="listinginfo">
+						<div class="listinglocation">Bountiful, UT</div>
+						<div class="listingexperience">10 Years Experience</div>
+						<div class="listingrating">
+							<span class="listingratingstars"><div class="rating-bobbysolis"></div></span>
+							<span class="listingratingreviews">5 reviews</span>
+						</div>
+						<div class="listingname">Bobby Solis</div>
+					</span>
+				</div>
+			</div>
+			<div class="loadmore"><button class="btn btn-primary btn-custom">LOAD MORE</button></div>
+		</div>
+		<script>
+			$(".my-rating1").starRating({
+			    starSize: 15,
+			    readOnly: true,
+			});
+			$('.my-rating1').starRating('setRating', 2.5);
+			$(".rating-bobbysolis").starRating({
+			    starSize: 15,
+			    readOnly: true,
+			});
+			$('.rating-bobbysolis').starRating('setRating', 5);
+			
+		</script>
+	</body>
+</html>

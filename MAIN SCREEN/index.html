@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Hire A Sound Guy!</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+				<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+		<style>
+			body {
+			    background-image: url(testbgoverlay.jpg);
+			    background-size: cover;
+			    background-height: 100%;
+			}
+
+			select {
+        /*for firefox*/
+        -moz-appearance: none;
+        /*for chrome*/
+        -webkit-appearance:none;
+      }
+
+			/*for IE10*/
+			select::-ms-expand {
+			    display: none;
+			}
+
+			.title {
+				background-color: rgba(0,0,0,0.5);
+				border: 1px solid white;
+		    border-radius: 20px;
+		    margin-top: 24vh;
+		    padding-bottom: 0.7em;
+		    width: 64vw;
+		    margin-left: auto;
+		    margin-right: auto;
+			}
+
+			.title h1 {
+				text-align: center;
+				color: #70d6ff;
+			}
+
+			.mainform {
+				min-height: 4em;
+				font-size: 1.3em;
+		    width: 80vw;
+		    min-width: 29vw;
+		    margin-left: auto;
+		    margin-right: auto;
+		    margin-top: 5vh;
+		    text-align: center;
+		    padding: 4vh 0 4vh 0;
+		    border-radius: 10px;
+		    background: rgba(255,255,255,0.7);
+			}
+
+			.mainsubmit {
+				margin-left: 2vw;
+			}
+
+			.btn-custom {
+				background-image: linear-gradient(to bottom,#00abf0 0,#008ac1 100%);
+			}
+
+			.mainselect {
+				min-height: 1.5em;
+				background-color: rgba(255,255,255,0.7);
+		    padding: 0 1vw 0 1vw;
+		    margin-bottom: 0;
+		    width: 13.5em;
+		    height: 5.5vh;
+		    background-image: url(downarrow.png);
+		    background-repeat: no-repeat;
+		    background-position: 99% 50%;
+		    background-size: 2vh;
+			}
+
+			.mainlocation {
+				min-height: 1.5em;
+				margin-bottom: 0;
+				padding-left: 1vw;
+  			height: 5.5vh;
+		    background-image: url(gpsicon.png);
+		    background-repeat: no-repeat;
+		    background-position: 99% 50%;
+		    background-size: 4vh 4vh;
+			}
+
+			.nearlocation {
+				width: 50vh;
+			}
+
+			@media (max-device-width: 768px) {
+
+				.title {
+			    width: 71vw;
+			    padding-top: 0;
+				}
+
+				.title h1 {
+					font-size: 1.5em;
+				}
+
+				.mainform {
+					font-size: 1.2em;
+					border-radius: 35px;
+					padding: 2vh 0 2vh 0;
+				}
+
+				.mainselect {
+					width: 60vw;
+			    height: 5.5vh;
+			    margin-left: 10vw;
+			    margin-right: 10vw;
+			    background-image: url(downarrow.png);
+			    background-repeat: no-repeat;
+			    background-position: 99% 50%;
+			    background-size: 2vh 2vh;
+				}
+
+				.mainlocation {
+					margin-top: 1vh;
+					margin-bottom: 1vh;
+    			width: 50vw;
+				}
+
+				.mainsubmit {
+					margin-left: 10vw;
+    			margin-right: 10vw;
+				}
+
+				.btn-custom {
+					width: 60vw;
+				}
+			}
+
+			@media (max-device-width: 380px) {
+
+				.title h1 {
+					font-size: 1.2em;
+				}
+
+				.mainform {
+					font-size: 1em;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="title">
+				<h1>HIRE A SOUND GUY . COM</h1>
+			</div>
+			<div>
+				<form class="mainform">
+					<select name="usertype" class="mainselect">
+						<option value="venue">I need an audio engineer</option>
+						<option value="engineer">I am an audio engineer</option>
+					</select>
+					<span class="nearlocation">
+						<span>near</span>
+						<input type="text" placeholder="Shoreline, Wa" class="mainlocation">
+						<span class="mainsubmit">
+							<a href="../test.html" type="submit" class="btn btn-primary btn-custom">Submit</a>
+						</span>
+					</span>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
