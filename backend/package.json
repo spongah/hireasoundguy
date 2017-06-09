@@ -4,7 +4,11 @@
   "description": "Hire A Sound Guy app - back end server",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "dependencies": {
+    "express": "*"
   },
   "author": "",
   "license": "ISC"
