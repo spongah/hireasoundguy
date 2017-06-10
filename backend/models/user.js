@@ -48,3 +48,11 @@ module.exports.getUserByUsername = function(usernameToFind, callback){
   const query = { username : usernameToFind };
   User.findOne(query, callback);
 }
+
+// takes typed password, hashed password, uses bcrypy to compare the two
+module.exports.comparePassword = function(typedPassword, storedPassword, callback) {
+  bcrypt.compare(typedPassword, storedPassword, (err, isMatch) => {
+    if (err) throw err;
+    callback(null, isMatch);
+  });
+}

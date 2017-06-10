@@ -12,7 +12,8 @@
     "body-parser": "*",
     "cors": "*",
     "mongoose": "*",
-    "bcryptjs": "*"
+    "bcryptjs": "*",
+    "jsonwebtoken": "*"
   },
   "author": "",
   "license": "ISC"
