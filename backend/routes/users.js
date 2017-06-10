@@ -12,6 +12,7 @@ const User = require('../models/user');
 // create router
 const router = express.Router();
 
+
 // USER ROUTES
 
 router.get('/all', (req, res, next) => {
