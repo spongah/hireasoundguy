@@ -4,6 +4,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const mongoose = require('mongoose');
+const passport = require('passport');
 
 // link to database config file
 const dbconfig = require('./config/database');
@@ -19,6 +20,10 @@ const app = express();
 // activate various middleware
 app.use(cors());  // allows cross origin access
 app.use(bodyParser.json()); // parses form data to req.body
+app.use(passport.initialize());
+app.use(passport.session());
+// runs function in passport.js and passes passport object to said function
+require('./config/passport')(passport);
 
 // set root web folder to "/public"
 app.use(express.static(path.join(__dirname, 'public')));

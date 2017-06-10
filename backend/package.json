@@ -13,7 +13,9 @@
     "cors": "*",
     "mongoose": "*",
     "bcryptjs": "*",
-    "jsonwebtoken": "*"
+    "jsonwebtoken": "*",
+    "passport": "*",
+    "passport-jwt": "*"
   },
   "author": "",
   "license": "ISC"

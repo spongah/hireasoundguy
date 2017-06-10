@@ -24,7 +24,10 @@ const UserSchema = mongoose.Schema({
 // export User model as mongoose model object called User following UserSchema
 const User = module.exports = mongoose.model('User', UserSchema);
 
-
+// takes an id and uses mongoose findById to return the user object via callback
+module.exports.getUserById = function(id, callback){
+  User.findById(id, callback);
+}
 
 // takes a username and uses mongoose findOne to return the user object via callback
 module.exports.getAllUsers = function(callback) {
