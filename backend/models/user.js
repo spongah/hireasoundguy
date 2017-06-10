@@ -42,3 +42,9 @@ module.exports.addUser = function(newUser, callback) {
     });
   });
 }
+
+// takes a username and uses mongoose findOne to return the user object via callback
+module.exports.getUserByUsername = function(usernameToFind, callback){
+  const query = { username : usernameToFind };
+  User.findOne(query, callback);
+}

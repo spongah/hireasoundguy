@@ -18,6 +18,21 @@ router.get('/all', (req, res, next) => {
   })
 });
 
+router.post('/findbyusername', (req, res, next) => {
+  if (!req.body.username) {
+    res.json({"success": "false", "message": "No Username Specified!"});
+  } else {
+    User.getUserByUsername(req.body.username, (err, user) => {
+      if (user) {
+        res.json(user);
+      } else {
+        let message = "Username: \'" + req.body.username + "\' not found!";
+        res.json({"success": "false", "message": message});
+      }
+    });
+  }
+});
+
 // register creates newUser from body parser then calls User's addUser
 router.post('/register', (req, res, next) => {
   let newUser = new User({
