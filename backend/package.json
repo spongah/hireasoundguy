@@ -11,7 +11,8 @@
     "express": "*",
     "body-parser": "*",
     "cors": "*",
-    "mongoose": "*"
+    "mongoose": "*",
+    "bcryptjs": "*"
   },
   "author": "",
   "license": "ISC"
