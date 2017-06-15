@@ -1,0 +1,139 @@
+body {
+    background-image: url(/assets/testbgoverlay.jpg);
+    background-size: cover;
+    background-height: 100%;
+    height:100vh;
+}
+
+select {
+  /*for firefox*/
+  -moz-appearance: none;
+  /*for chrome*/
+  -webkit-appearance:none;
+}
+
+/*for IE10*/
+select::-ms-expand {
+    display: none;
+}
+
+.title {
+  background-color: rgba(0,0,0,0.5);
+  border: 1px solid white;
+  border-radius: 20px;
+  margin-top: 24vh;
+  padding-bottom: 0.7em;
+  width: 64vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title h1 {
+  text-align: center;
+  color: #70d6ff;
+}
+
+.mainform {
+  min-height: 4em;
+  font-size: 1.3em;
+  width: 80vw;
+  min-width: 29vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5vh;
+  text-align: center;
+  padding: 4vh 0 4vh 0;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.7);
+}
+
+.mainsubmit {
+  margin-left: 2vw;
+}
+
+.btn-custom {
+  background-image: linear-gradient(to bottom,#00abf0 0,#008ac1 100%);
+}
+
+.mainselect {
+  min-height: 1.5em;
+  background-color: rgba(255,255,255,0.7);
+  padding: 0 1vw 0 1vw;
+  margin-bottom: 0;
+  width: 13.5em;
+  height: 5.5vh;
+  background-image: url(/assets/downarrow.png);
+  background-repeat: no-repeat;
+  background-position: 99% 50%;
+  background-size: 2vh;
+}
+
+.mainlocation {
+  min-height: 1.5em;
+  margin-bottom: 0;
+  padding-left: 1vw;
+  height: 5.5vh;
+  background-image: url(/assets/gpsicon.png);
+  background-repeat: no-repeat;
+  background-position: 99% 50%;
+  background-size: 4vh 4vh;
+}
+
+.nearlocation {
+  width: 50vh;
+}
+
+@media (max-device-width: 768px) {
+
+  .title {
+    width: 71vw;
+    padding-top: 0;
+  }
+
+  .title h1 {
+    font-size: 1.5em;
+  }
+
+  .mainform {
+    font-size: 1.2em;
+    border-radius: 35px;
+    padding: 2vh 0 2vh 0;
+  }
+
+  .mainselect {
+    width: 60vw;
+    height: 5.5vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    background-image: url(/assets/downarrow.png);
+    background-repeat: no-repeat;
+    background-position: 99% 50%;
+    background-size: 2vh 2vh;
+  }
+
+  .mainlocation {
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    width: 50vw;
+  }
+
+  .mainsubmit {
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
+
+  .btn-custom {
+    width: 60vw;
+  }
+}
+
+@media (max-device-width: 380px) {
+
+  .title h1 {
+    font-size: 1.2em;
+  }
+
+  .mainform {
+    font-size: 1em;
+  }
+}
