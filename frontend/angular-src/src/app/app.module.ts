@@ -12,6 +12,7 @@ import { SigninComponent } from './components/signin/signin.component';
 import { LogoutComponent } from './components/logout/logout.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { LandComponent } from './components/land/land.component';
+import { AdminComponent } from './components/admin/admin.component';
 
 const appRoutes: Routes = [
   { path: '', component: LandComponent },
@@ -20,6 +21,7 @@ const appRoutes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'signin', component: SigninComponent },
   { path: 'logout', component: LogoutComponent },
+  { path: 'admin', component: AdminComponent },
 
   { path: '**', component: LandComponent }
 ];
@@ -33,7 +35,8 @@ const appRoutes: Routes = [
     SigninComponent,
     LogoutComponent,
     ProfileComponent,
-    LandComponent
+    LandComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,

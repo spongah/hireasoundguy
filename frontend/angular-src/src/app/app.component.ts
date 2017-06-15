@@ -21,7 +21,8 @@ export class AppComponent implements OnInit {
       (this.router.url == "/profile") ||
       (this.router.url == "/register") ||
       (this.router.url == "/signin") ||
-      (this.router.url == "/logout")
+      (this.router.url == "/logout") ||
+      (this.router.url == "/admin")
     ) {
       return true;
     } else {
