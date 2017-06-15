@@ -17,12 +17,12 @@ export class AppComponent implements OnInit {
 
   showNav():boolean {
     if (
-      (this.router.url == "/home") ||
-      (this.router.url == "/profile") ||
-      (this.router.url == "/register") ||
-      (this.router.url == "/signin") ||
-      (this.router.url == "/logout") ||
-      (this.router.url == "/admin")
+      (String(this.router.url).startsWith('/home')) ||
+      (String(this.router.url).startsWith('/profile')) ||
+      (String(this.router.url).startsWith('/register')) ||
+      (String(this.router.url).startsWith('/signin')) ||
+      (String(this.router.url).startsWith('/logout')) ||
+      (String(this.router.url).startsWith('/admin'))
     ) {
       return true;
     } else {
