@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./land.component.css']
 })
 export class LandComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit() {

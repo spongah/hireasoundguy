@@ -16,10 +16,10 @@ import { LandComponent } from './components/land/land.component';
 const appRoutes: Routes = [
   { path: '', component: LandComponent },
   { path: 'home', component: HomeComponent },
+  { path: 'profile', component: ProfileComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'signin', component: SigninComponent },
   { path: 'logout', component: LogoutComponent },
-  { path: 'profile', component: ProfileComponent },
 
   { path: '**', component: LandComponent }
 ];
