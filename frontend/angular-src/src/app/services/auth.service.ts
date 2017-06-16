@@ -15,4 +15,10 @@ export class AuthService {
     return this.http.post('http://localhost:8080/users/register', user, {headers : headers})
       .map(res => res.json());
   }
+
+  authUser(user) {
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    return this.http.post('http://localhost:8080/users/authenticate', user, {headers: headers}).map(res => res.json());
+  }
 }
