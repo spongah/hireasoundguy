@@ -27,13 +27,18 @@ export class SigninComponent implements OnInit {
       password: this.password
     }
 
+    if ((!user.username) || (!user.password)) {
+      this.flashMessage.show('Please enter both a username and password.', {cssClass: 'alert-danger'});
+      return false;
+    }
+
     this.authService.authUser(user).subscribe(data => {
       if (data.success) {
-        this.flashMessage.show('Successfully logged in!', {cssClass: 'alert-success'});
+        this.flashMessage.show('Signed in successfully!', {cssClass: 'alert-success'});
         this.router.navigate(['/profile']);
         this.authService.storeUserData(data.token, data.user);
       } else {
-        this.flashMessage.show('Failed to authenticate user.', {cssClass: 'alert-danger'});
+        this.flashMessage.show('Incorrect username or password, please try again.', {cssClass: 'alert-danger'});
         this.router.navigate(['/signin']);
       }
     });

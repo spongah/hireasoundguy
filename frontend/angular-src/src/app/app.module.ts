@@ -14,6 +14,7 @@ import { LandComponent } from './components/land/land.component';
 import { AdminComponent } from './components/admin/admin.component';
 
 import { AuthService } from './services/auth.service';
+import { ValidateService } from './services/validate.service';
 import { FlashMessagesModule } from 'angular2-flash-messages';
 
 const appRoutes: Routes = [
@@ -45,7 +46,10 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     FlashMessagesModule
   ],
-  providers: [AuthService],
+  providers: [
+    AuthService,
+    ValidateService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
