@@ -9,10 +9,11 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { RegisterComponent } from './components/register/register.component';
 import { SigninComponent } from './components/signin/signin.component';
-import { LogoutComponent } from './components/logout/logout.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { LandComponent } from './components/land/land.component';
 import { AdminComponent } from './components/admin/admin.component';
+
+import { AuthService } from './services/auth.service';
 
 const appRoutes: Routes = [
   { path: '', component: LandComponent },
@@ -20,7 +21,6 @@ const appRoutes: Routes = [
   { path: 'profile', component: ProfileComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'signin', component: SigninComponent },
-  { path: 'logout', component: LogoutComponent },
   { path: 'admin', component: AdminComponent },
 
   { path: '**', component: LandComponent }
@@ -33,7 +33,6 @@ const appRoutes: Routes = [
     HomeComponent,
     RegisterComponent,
     SigninComponent,
-    LogoutComponent,
     ProfileComponent,
     LandComponent,
     AdminComponent
@@ -44,7 +43,7 @@ const appRoutes: Routes = [
     HttpModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
