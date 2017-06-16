@@ -14,6 +14,7 @@ import { LandComponent } from './components/land/land.component';
 import { AdminComponent } from './components/admin/admin.component';
 
 import { AuthService } from './services/auth.service';
+import { FlashMessagesModule } from 'angular2-flash-messages';
 
 const appRoutes: Routes = [
   { path: '', component: LandComponent },
@@ -41,7 +42,8 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    FlashMessagesModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
