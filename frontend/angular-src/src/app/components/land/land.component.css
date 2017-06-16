@@ -83,7 +83,25 @@ select::-ms-expand {
   width: 50vh;
 }
 
-@media (max-device-width: 768px) {
+@media (min-width: 1600px) {
+  .container {
+    width: 100%;
+  }
+
+  .mainform {
+    font-size: 1.5em;
+  }
+
+  .mainselect {
+    width: 21em;
+  }
+
+  .mainlocation {
+    width: 21em;
+  }
+}
+
+@media (max-device-width: 768px), (max-width: 1200px) {
 
   .title {
     width: 71vw;
@@ -100,8 +118,12 @@ select::-ms-expand {
     padding: 2vh 0 2vh 0;
   }
 
+
+}
+
+@media (max-device-width: 768px), (max-width: 1200px) {
   .mainselect {
-    width: 60vw;
+    width: 50vw;
     height: 5.5vh;
     margin-left: 10vw;
     margin-right: 10vw;
@@ -114,7 +136,7 @@ select::-ms-expand {
   .mainlocation {
     margin-top: 1vh;
     margin-bottom: 1vh;
-    width: 50vw;
+    width: 47vw;
   }
 
   .mainsubmit {
@@ -123,7 +145,7 @@ select::-ms-expand {
   }
 
   .btn-custom {
-    width: 60vw;
+    width: 50vw;
   }
 }
 

@@ -25,8 +25,10 @@ export class SigninComponent implements OnInit {
     this.authService.authUser(user).subscribe(data => {
       if (data.success) {
         console.log('Successfully logged in!');
+        console.log(data);
       } else {
         console.log('Failed to authenticate user.');
+        console.log(data);
       }
     });
   }
