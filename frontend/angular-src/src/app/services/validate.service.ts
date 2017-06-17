@@ -1,9 +1,14 @@
 import { Injectable } from '@angular/core';
+import { Http, Headers } from '@angular/http';
+import 'rxjs/add/operator/map';
+
 
 @Injectable()
 export class ValidateService {
 
-  constructor() { }
+  constructor(
+    private http: Http
+  ) { }
 
     validateRegister(user) {
       if (!user.name || !user.email || !user.username || !user.password){
@@ -11,6 +16,19 @@ export class ValidateService {
       } else {
         return true;
       }
+    }
+
+    validateUsername(username, callback) {
+      let headers = new Headers();
+      headers.append('Content-Type', 'application/json');
+      this.http.post('http://localhost:8080/users/findbyusername', { username: username }, { headers: headers })
+        .map(res => res.json()).subscribe(data => {
+          if (data.username == username) {
+            callback(false);
+          } else {
+            callback(true);
+          }
+      });
     }
 
     validateEmail(email) {

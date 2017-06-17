@@ -11,6 +11,13 @@ export class AuthService {
 
   constructor(private http: Http) { }
 
+  findUsername(user) {
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    return this.http.post('http://localhost:8080/users/findbyusername', user, {headers : headers})
+      .map(res => res.json());
+  }
+
   registerUser(user) {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');

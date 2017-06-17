@@ -45,6 +45,21 @@ export class RegisterComponent implements OnInit {
       return false;
     }
 
+    // check for username availability
+    this.validateService.validateUsername(user.username, valid => {
+      if (!valid) {
+        this.flashMessages.show('Username already in use, please select a different username.', {cssClass: 'alert-danger'});
+        this.router.navigate(['/register']);
+      } else {
+        this.addUser(user);
+      }
+    });
+
+
+
+  }
+
+  addUser(user) {
     // register user
     console.log(user);
     this.authService.registerUser(user).subscribe(data => {
