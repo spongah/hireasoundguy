@@ -111,5 +111,21 @@ router.get('/profile', passport.authenticate('jwt', { session: false })
   res.json({ user : req.user });
 });
 
+router.post('/delete', (req, res, next) => {
+  User.remove({ _id: req.body._id}, (err, removed) => {
+    if (!err) {
+      return res.json({
+        success: true,
+        message: 'SUCCESSFULLY DELETED ' + removed.result.ok + ' RECORDS'
+      });
+    } else {
+      return res.json({
+        success: false,
+        message: err
+      });
+    }
+  });
+});
+
 // EXPORT ROUTES
 module.exports = router;

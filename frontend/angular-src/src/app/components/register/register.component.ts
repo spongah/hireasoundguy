@@ -54,9 +54,6 @@ export class RegisterComponent implements OnInit {
         this.addUser(user);
       }
     });
-
-
-
   }
 
   addUser(user) {

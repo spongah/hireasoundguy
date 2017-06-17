@@ -59,3 +59,7 @@ module.exports.comparePassword = function(typedPassword, storedPassword, callbac
     callback(null, isMatch);
   });
 }
+
+module.exports.deleteUser = function(user, callback) {
+  User.delete(user);
+}
