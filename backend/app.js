@@ -47,6 +47,9 @@ mongoose.connection.on('connected', () => {
 
 mongoose.connection.on('error', (err) => {
   // CONNECTION FAILED, LOG ERROR TO CONSOLE
-  console.log('Server not started.');
+  // console.log('Server not started.');
   console.log('Database error: ' + err);
+  app.listen(port, () => {
+    console.log('Server started on port ' + port);
+  });
 });
