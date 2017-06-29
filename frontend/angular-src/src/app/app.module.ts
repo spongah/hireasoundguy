@@ -16,6 +16,7 @@ import { AdminComponent } from './components/admin/admin.component';
 import { AuthService } from './services/auth.service';
 import { ValidateService } from './services/validate.service';
 import { FlashMessagesModule } from 'angular2-flash-messages';
+import { IntroComponent } from './components/intro/intro.component';
 
 const appRoutes: Routes = [
   { path: '', component: LandComponent },
@@ -37,7 +38,8 @@ const appRoutes: Routes = [
     SigninComponent,
     ProfileComponent,
     LandComponent,
-    AdminComponent
+    AdminComponent,
+    IntroComponent
   ],
   imports: [
     BrowserModule,
